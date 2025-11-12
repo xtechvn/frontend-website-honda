@@ -1,0 +1,131 @@
+
+
+.header {
+    background: #FFF;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    padding: 16px 0;
+    transition: all 0.3s ease-in;
+    border-bottom: 1px solid #EBD8CA;
+
+    @media (max-width:767px) {
+        padding: 10px 0;
+    }
+    &.pin{
+        background: #FFF;
+        padding: 5px 0;
+        top: 0;
+        position: fixed;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        border-bottom: 1px solid #EBD8CA;
+        z-index: 12;
+        .logo img{
+            width: 150px !important;
+        }
+    }
+    .navbar{
+        padding: 0;
+        .logo{
+            img{
+            transition: all 0.3s ease-in;
+
+                width: 200px;
+                @media (max-width:767px) {
+                    width: 100px !important;
+                }
+            }
+            .white{
+                display: none;
+            }
+        }
+        .navbar-nav{
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 150%; /* 27px */
+            @media (max-width:767px) {
+                margin-top: 20px;
+            }
+            .nav-item{
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+            a{
+                color: var(--color-base);
+                padding-left: 0;
+                padding-right: 0;
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid transparent;
+                @media (max-width:767px) {
+                    padding: 10px 0;
+                }
+            }
+            .active{
+                >a{
+                   border-bottom: 1px solid;
+                }
+            }
+            .dropdown-toggle::after{
+                border: 0;
+                width: auto;
+                height: auto;
+                line-height: 10px;
+                content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M15.0228 7.14797L9.39779 12.773C9.34555 12.8253 9.28351 12.8668 9.21523 12.8951C9.14694 12.9234 9.07375 12.9379 8.99982 12.9379C8.9259 12.9379 8.85271 12.9234 8.78442 12.8951C8.71613 12.8668 8.6541 12.8253 8.60186 12.773L2.97686 7.14797C2.87131 7.04242 2.81201 6.89927 2.81201 6.75C2.81201 6.60074 2.87131 6.45758 2.97686 6.35203C3.0824 6.24649 3.22556 6.18719 3.37482 6.18719C3.52409 6.18719 3.66725 6.24649 3.77279 6.35203L8.99982 11.5798L14.2269 6.35203C14.2791 6.29977 14.3412 6.25832 14.4094 6.23003C14.4777 6.20175 14.5509 6.18719 14.6248 6.18719C14.6987 6.18719 14.7719 6.20175 14.8402 6.23003C14.9085 6.25832 14.9705 6.29977 15.0228 6.35203C15.0751 6.4043 15.1165 6.46634 15.1448 6.53462C15.1731 6.60291 15.1876 6.67609 15.1876 6.75C15.1876 6.82391 15.1731 6.8971 15.1448 6.96538C15.1165 7.03367 15.0751 7.09571 15.0228 7.14797Z" fill="%23553A26"/></svg>');
+            }
+            .dropdown-menu{
+                .dropdown-item{
+                    padding: 5px 10px;
+                }
+            }
+        }
+        .form-inline {
+            position: relative;
+            .form-control{
+                border: 1px solid var(--color-base);
+                background: transparent;
+            }
+            .btn{
+                position: absolute;
+                right: 5px;
+                top: 4px;
+                color: #fff;
+                width: 40px;
+                height: 40px;
+                margin: 0 !important;
+                background: #E1927F;
+            }
+        }
+    }
+    .navbar-toggler{
+        color: var(--color-base);
+        &:focus{
+            outline: none;
+        }
+    }
+   
+}
+.homepage{
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99;
+        transition: all 0.3s ease-in;
+        background: transparent;
+        border: 0;
+        @media (max-width:767px) {
+            background: #fff;
+         }
+        
+        &.pin{
+            background: #fff;
+           
+        }
+    }
+}

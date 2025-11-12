@@ -1,0 +1,146 @@
+.footer {
+    border-top: 1px solid #B37B54;
+    padding: 40px 0;
+    position: relative;
+    color: #033256;
+    font-weight: 600;
+    background: url(images/bg-footer.png) left bottom no-repeat;
+    @media (max-width:767px) {
+        padding: 20px 0;
+        
+    }
+    .logo{
+        width: 200px;
+        margin-bottom: 10px;
+         @media (max-width:767px){
+           width: 100px;
+        }
+    }
+    .title{
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+    .grid-address{
+        margin-top: 10px;
+        svg{
+            flex-shrink: 0;
+        }
+    }
+    .wrap-ft{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        @media (max-width:767px){
+            flex-wrap: wrap;
+        }
+        .left-ft{
+            width: 100%;
+             ul{
+                display: grid;
+                gap: 10px;
+                li{
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                }
+             
+             }
+        }
+        .right-ft{
+            width: 380px;
+            max-width: 100%;
+            flex-shrink: 0;
+        }
+        + .wrap-ft{
+            margin-top: 40px;
+        }
+        .flex-link{
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+           
+            @media (max-width:767px){
+                flex-wrap: wrap;
+            }
+          
+        }
+        .item{
+            &.cols-2{
+                justify-content: space-between;
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                 column-gap: 10px;
+                max-width: 650px;
+                @media (max-width:900px){
+                   column-gap: 20px;
+                }
+                @media (max-width:767px){
+                    gap: 10px;
+                }
+                .title{
+                    width: 100%;
+                }
+               
+            }
+            &:first-child, &:last-child{
+                flex-shrink: 0;
+            }
+        }
+        .social{
+            ul{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                + .title{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+/* Style for scroll-top button */
+.backToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    height: 44px;
+    width: 44px;
+    @media (max-width:991px) {
+        width: 35px;
+        height: 35px;
+    }
+    padding: 0;
+    border: none;
+    color: #cccccc;
+    border-radius: 100%;
+    transition: 0.5s;
+    cursor: pointer;
+    transform: rotate(-180deg);
+    background: var(--color-base) url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M15.0228 7.14797L9.39779 12.773C9.34555 12.8253 9.28351 12.8668 9.21523 12.8951C9.14694 12.9234 9.07375 12.9379 8.99982 12.9379C8.9259 12.9379 8.85271 12.9234 8.78442 12.8951C8.71613 12.8668 8.6541 12.8253 8.60186 12.773L2.97686 7.14797C2.87131 7.04242 2.81201 6.89927 2.81201 6.75C2.81201 6.60074 2.87131 6.45758 2.97686 6.35203C3.0824 6.24649 3.22556 6.18719 3.37482 6.18719C3.52409 6.18719 3.66725 6.24649 3.77279 6.35203L8.99982 11.5798L14.2269 6.35203C14.2791 6.29977 14.3412 6.25832 14.4094 6.23003C14.4777 6.20175 14.5509 6.18719 14.6248 6.18719C14.6987 6.18719 14.7719 6.20175 14.8402 6.23003C14.9085 6.25832 14.9705 6.29977 15.0228 6.35203C15.0751 6.4043 15.1165 6.46634 15.1448 6.53462C15.1731 6.60291 15.1876 6.67609 15.1876 6.75C15.1876 6.82391 15.1731 6.8971 15.1448 6.96538C15.1165 7.03367 15.0751 7.09571 15.0228 7.14797Z" fill="%23ffffff"/></svg>') no-repeat center;
+}
+
+
+.backToTopBtn:hover {
+    opacity: 0.8;
+}
+
+.backToTopBtn.active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.backToTopBtn:not(.active) {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
