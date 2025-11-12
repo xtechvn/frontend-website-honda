@@ -1,0 +1,465 @@
+﻿@{
+    ViewData["Title"] = "Trang chủ";
+}
+<style>
+    .img {
+        object-fit: contain !important;
+    }
+   
+
+</style>
+<ul class="social-fixed">
+    @*<li><a href=""><img src="images/cart.png" alt=""> </a></li>*@
+    <li><a target="https://www.facebook.com/share/195Jnd1PpB/?mibextid=wwXIfr" href="https://www.facebook.com/share/195Jnd1PpB/?mibextid=wwXIfr"><img src="images/fb.png" alt=""></a></li>
+    <li><a target="https://Zalo.me/0853379066" href="https://Zalo.me/0853379066"><img src="images/zalo.png" alt=""></a></li>
+    <li>
+        <a href="tel: 085 3379 066" class="hotline">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.5253 4.30599C13.5508 4.21081 13.5947 4.12158 13.6547 4.04339C13.7147 3.9652 13.7894 3.8996 13.8748 3.85032C13.9601 3.80104 14.0543 3.76906 14.152 3.7562C14.2496 3.74334 14.3489 3.74985 14.4441 3.77537C15.8344 4.13813 17.103 4.86497 18.119 5.88103C19.1351 6.89708 19.8619 8.16562 20.2247 9.55599C20.2502 9.65116 20.2567 9.75042 20.2439 9.84811C20.231 9.94579 20.199 10.04 20.1497 10.1253C20.1005 10.2106 20.0349 10.2854 19.9567 10.3454C19.8785 10.4053 19.7893 10.4493 19.6941 10.4747C19.6307 10.4914 19.5655 10.4999 19.5 10.5001C19.3347 10.5001 19.1741 10.4455 19.043 10.3448C18.912 10.244 18.8179 10.1029 18.7753 9.94318C18.4795 8.80817 17.8863 7.77259 17.0569 6.9432C16.2275 6.11381 15.1919 5.52061 14.0569 5.22474C13.9616 5.19938 13.8723 5.15549 13.794 5.09558C13.7157 5.03566 13.65 4.9609 13.6006 4.87557C13.5513 4.79024 13.5192 4.69601 13.5063 4.59828C13.4933 4.50054 13.4998 4.40122 13.5253 4.30599ZM13.3069 8.22474C14.5997 8.56974 15.4303 9.40037 15.7753 10.6932C15.8179 10.8529 15.912 10.994 16.043 11.0948C16.1741 11.1955 16.3347 11.25 16.5 11.2501C16.5655 11.2499 16.6307 11.2414 16.6941 11.2247C16.7893 11.1993 16.8785 11.1553 16.9567 11.0954C17.0349 11.0354 17.1005 10.9606 17.1497 10.8753C17.199 10.79 17.231 10.6958 17.2439 10.5981C17.2567 10.5004 17.2502 10.4012 17.2247 10.306C16.7447 8.50974 15.4903 7.25537 13.6941 6.77537C13.5019 6.72402 13.2971 6.75113 13.1249 6.85073C12.9527 6.95033 12.8271 7.11426 12.7758 7.30646C12.7244 7.49866 12.7516 7.70338 12.8512 7.87559C12.9508 8.04781 13.1147 8.1734 13.3069 8.22474ZM20.9888 17.1638C20.8216 18.4341 20.1977 19.6002 19.2337 20.4442C18.2696 21.2882 17.0313 21.7523 15.75 21.7501C8.30626 21.7501 2.25001 15.6938 2.25001 8.25005C2.24771 6.96876 2.7119 5.73045 3.55588 4.76639C4.39986 3.80234 5.56592 3.17847 6.83626 3.0113C7.1575 2.97208 7.4828 3.0378 7.76362 3.19865C8.04444 3.35951 8.2657 3.60687 8.39438 3.9038L10.3744 8.32412V8.33537C10.4729 8.56267 10.5136 8.81083 10.4928 9.05769C10.472 9.30455 10.3904 9.54242 10.2553 9.75005C10.2384 9.77537 10.2206 9.7988 10.2019 9.82224L8.25001 12.136C8.9522 13.5629 10.4447 15.0422 11.8903 15.7463L14.1722 13.8047C14.1946 13.7859 14.2181 13.7684 14.2425 13.7522C14.45 13.6139 14.6887 13.5294 14.937 13.5065C15.1853 13.4836 15.4354 13.5229 15.6647 13.621L15.6769 13.6266L20.0934 15.6057C20.3909 15.7339 20.6389 15.955 20.8003 16.2358C20.9616 16.5167 21.0278 16.8422 20.9888 17.1638ZM19.5 16.9763C19.5 16.9763 19.4934 16.9763 19.4897 16.9763L15.0834 15.0029L12.8006 16.9444C12.7785 16.9632 12.7553 16.9807 12.7313 16.9969C12.5154 17.1409 12.2659 17.2265 12.0071 17.2452C11.7483 17.2639 11.489 17.2152 11.2547 17.1038C9.49876 16.2554 7.74845 14.5182 6.89907 12.781C6.7866 12.5484 6.73613 12.2906 6.75255 12.0327C6.76898 11.7749 6.85174 11.5256 6.99282 11.3091C7.00872 11.2837 7.02659 11.2596 7.04626 11.2369L9.00001 8.92037L7.03126 4.51412C7.03089 4.51038 7.03089 4.50661 7.03126 4.50287C6.12212 4.62146 5.28739 5.0674 4.68339 5.75716C4.0794 6.44693 3.74755 7.33322 3.75001 8.25005C3.75348 11.4316 5.01888 14.4818 7.26856 16.7315C9.51825 18.9812 12.5685 20.2466 15.75 20.2501C16.6663 20.2532 17.5523 19.9225 18.2425 19.3198C18.9327 18.7171 19.3797 17.8837 19.5 16.9754V16.9763Z"
+                      fill="#ffffff" />
+            </svg>
+
+            <span> 085 3379 066</span>
+        </a>
+    </li>
+</ul>
+<section class="section-banner">
+    <div class="banner-swiper">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="~/images/banner-home.jpeg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="~/images/banner-home2.jpeg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="~/images/banner-home3.png" alt="" />
+                </div>
+            </div>
+            <!-- Navigation -->
+            <div class="swiper-button-next">
+                <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.23021 0.96891L9.73021 8.46891C9.80001 8.53861 9.85531 8.62131 9.89301 8.71241C9.93081 8.80341 9.95021 8.90101 9.95021 8.99961C9.95021 9.09811 9.93081 9.19571 9.89301 9.28681C9.85531 9.37781 9.80001 9.46051 9.73021 9.53021L2.23021 17.0302C2.08951 17.1709 1.89866 17.25 1.69963 17.25C1.50061 17.25 1.30974 17.1709 1.16901 17.0302C1.02828 16.8895 0.949219 16.6986 0.949219 16.4996C0.949219 16.3006 1.02828 16.1097 1.16901 15.969L8.13931 8.99961L1.16901 2.03021C1.09933 1.96051 1.04405 1.87781 1.00634 1.78671C0.968629 1.69571 0.949219 1.59811 0.949219 1.49961C0.949219 1.40101 0.968629 1.30341 1.00634 1.21241C1.04405 1.12141 1.09933 1.03861 1.16901 0.96891C1.23869 0.89931 1.32142 0.844011 1.41246 0.806311C1.50351 0.768611 1.60109 0.74921 1.69963 0.74921C1.79818 0.74921 1.89576 0.768611 1.98681 0.806311C2.07781 0.844011 2.16061 0.89931 2.23021 0.96891Z"
+                          fill="#8E6040" />
+                </svg>
+
+            </div>
+            <div class="swiper-button-prev">
+                <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.76979 17.0311L0.269792 9.53109C0.199992 9.46139 0.144692 9.37869 0.106992 9.28759C0.0691918 9.19659 0.0497904 9.09899 0.0497904 9.00039C0.0497904 8.90189 0.0691918 8.80429 0.106992 8.71319C0.144692 8.62219 0.199992 8.53949 0.269792 8.46979L7.76979 0.96979C7.91049 0.82906 8.10134 0.75 8.30037 0.75C8.49939 0.75 8.69026 0.82906 8.83099 0.96979C8.97172 1.11052 9.05078 1.3014 9.05078 1.50042C9.05078 1.69944 8.97172 1.89031 8.83099 2.03104L1.86069 9.00039L8.83099 15.9698C8.90067 16.0395 8.95595 16.1222 8.99366 16.2133C9.03137 16.3043 9.05078 16.4019 9.05078 16.5004C9.05078 16.599 9.03137 16.6966 8.99366 16.7876C8.95595 16.8786 8.90067 16.9614 8.83099 17.0311C8.76131 17.1007 8.67858 17.156 8.58754 17.1937C8.49649 17.2314 8.39891 17.2508 8.30037 17.2508C8.20182 17.2508 8.10424 17.2314 8.01319 17.1937C7.92219 17.156 7.83939 17.1007 7.76979 17.0311Z"
+                          fill="#8E6040" />
+                </svg>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+@*Sản phẩm bán chạy*@
+<section class="product-section">
+    <div class="container">
+        <h4 class="title">Sản phẩm bán chạy nhất</h4>
+        <div class="product-category" >
+            <div class="list-product" >
+                <div class="item-product">
+                    <a href="/Home/DetailHondaCity">
+
+                        <div class="product-image">
+                            <img src="~/images/sp1.png" class="img" alt="Sản phẩm">
+                        </div>
+                        <p class="product-title">Honda City</p>
+                        <div class="product-price-info">
+                            <div class="price-details">
+                                <div class="price">Giá từ 449 triệu</div>
+
+                            </div>
+                        </div>
+                        <p class="product-title" style="color: red; text-align: center;">Khuyến mãi lên tới 55 triệu đồng + Tặng gói phụ kiện chính hãng</p>
+                    </a>
+                </div>
+                <div class="item-product">
+                    <a href="/Home/Detail">
+
+                        <div class="product-image">
+                            <img src="~/images/sp2.png" class="img" alt="Sản phẩm">
+                        </div>
+                        <p class="product-title">Honda CR-V</p>
+                        <div class="product-price-info">
+                            <div class="price-details">
+                                <div class="price">Giá từ 942 triệu</div>
+
+                            </div>
+                        </div>
+                        <p class="product-title" style="color: red; text-align: center;">Khuyến mãi lên tới 120 triệu đồng + Tặng phụ kiện chính hãng</p>
+                    </a>
+                </div>
+                <div class="item-product">
+                    <a href="/Home/DetailHondaHr">
+
+                        <div class="product-image">
+                            <img src="~/images/sp3.png" class="img" alt="Sản phẩm">
+                        </div>
+                        <p class="product-title">Honda HR-V</p>
+                        <div class="product-price-info">
+                            <div class="price-details">
+                                <div class="price">Giá từ 699 triệu</div>
+
+                            </div>
+                        </div>
+                        <p class="product-title" style="color: red; text-align: center;">Khuyến mãi lên tới 70 triệu đồng + Tặng phụ kiện chính hãng</p>
+                    </a>
+                </div>
+                <div class="item-product">
+                    <a href="/Home/DetailHondaBRV">
+
+                        <div class="product-image">
+                            <img src="~/images/sp4.png" class="img" alt="Sản phẩm">
+                        </div>
+                        <p class="product-title">Honda BR-V</p>
+                        <div class="product-price-info">
+                            <div class="price-details">
+                                <div class="price">Giá từ 574 triệu</div>
+
+                            </div>
+                        </div>
+                        <p class="product-title" style="color: red; text-align: center;">Khuyến mãi lên tới 70 triệu đồng + Tặng phụ kiện chính hãng</p>
+                    </a>
+                </div>
+                <div class="item-product">
+                    <a href="/Home/DetailHondaCivic">
+
+                        <div class="product-image">
+                            <img src="~/images/sp5.png" class="img" alt="Sản phẩm">
+                        </div>
+                        <p class="product-title">Honda Civic</p>
+                        <div class="product-price-info">
+                            <div class="price-details">
+                                <div class="price">Giá từ 789 triệu</div>
+
+                            </div>
+                        </div>
+                        <p class="product-title" style="color: red; text-align: center;">Khuyến mãi lên tới 50 triệu đồng + Tặng phụ kiện chính hãng</p>
+                    </a>
+                </div>
+                <div class="item-product">
+                    <a href="/Home/DetailHondaAccord">
+
+                        <div class="product-image">
+                            <img src="~/images/sp6.png" class="img" alt="Sản phẩm">
+                        </div>
+                        <p class="product-title">Honda Accord</p>
+                        <div class="product-price-info">
+                            <div class="price-details">
+                                <div class="price">Giá từ 1.319 triệu</div>
+
+                            </div>
+                        </div>
+                        <p class="product-title" style="color: red; text-align: center;">Khuyến mãi lên tới 275 triệu đồng + Tặng phụ kiện chính hãng</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-omori">
+    <div class="container">
+        <div class="about-wrap">
+            <div class="about-image">
+                <img src="images/img1.jpeg" />
+            </div>
+
+            <div class="about-content">
+                <div class="decor-star">
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.67755 1.71666C6.87875 0.72848 8.09382 0.354718 8.81562 1.05897L12.1403 4.30288C12.4143 4.57014 12.7938 4.7001 13.1741 4.65684L17.7894 4.13168C18.7914 4.01766 19.5223 5.05776 19.0756 5.96186L17.0178 10.1263C16.8483 10.4694 16.842 10.8705 17.0006 11.2188L18.9263 15.4459C19.3444 16.3636 18.581 17.3802 17.5831 17.2347L12.9867 16.5646C12.608 16.5094 12.2245 16.6273 11.9423 16.8858L8.51713 20.0235C7.77352 20.7047 6.57082 20.2929 6.40082 19.2989L5.61778 14.7203C5.55326 14.343 5.32259 14.0148 4.98953 13.8263L0.946988 11.5383C0.0693499 11.0416 0.0893576 9.77054 0.982193 9.30169L5.09473 7.1421C5.43356 6.96418 5.67445 6.64336 5.7508 6.26835L6.67755 1.71666Z"
+                              fill="#EBCCAD" />
+                    </svg>
+
+                    <svg width="44" height="46" viewBox="0 0 44 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25.0529 1.58415C26.7726 0.0709496 29.4853 1.06089 29.8261 3.32608L31.3963 13.7599C31.5256 14.6195 32.0346 15.3754 32.7824 15.8187L41.8591 21.1985C43.8297 22.3664 43.7265 25.2522 41.6775 26.2764L32.2396 30.9939C31.462 31.3826 30.9003 32.1002 30.7099 32.9484L28.3982 43.2434C27.8964 45.4784 25.1199 46.272 23.5127 44.6398L16.1096 37.1215C15.4996 36.5021 14.6436 36.1897 13.778 36.2707L3.27264 37.2535C0.991911 37.4669 -0.620803 35.0715 0.434863 33.0386L5.29743 23.6746C5.69805 22.9031 5.73063 21.9924 5.38615 21.1942L1.2051 11.5067C0.297391 9.40353 2.07714 7.12954 4.3368 7.50533L14.7451 9.23626C15.6026 9.37887 16.4789 9.12843 17.1315 8.55418L25.0529 1.58415Z"
+                              fill="#EBCCAD" />
+                    </svg>
+                </div>
+
+                <h4>HONDA AN KHÁNH</h4>
+                <p><strong><span>Địa Chỉ Showroom : </span>Km9+800, ĐCT Láng - Hòa Lạc, An Khánh,&nbsp;Hà Nội</strong></p>
+                <div class="section-seller-detail detail-content">
+                    <p style="margin-bottom:15px;font-weight:bold;">Phụ trách&nbsp;kinh doanh HONDA Việt Nam</p>
+
+                    <p style="margin-bottom:15px;font-weight:bold;">☎ Hotline(Zalo) : <a href="tel:0819637777" style="color:#e74c3c;">0819.63.7777</a></p>
+
+                    <p style="margin-bottom:15px;font-weight:bold;">Gmail: <a href="mailto:hondaotohoaiduc@gmail.com" style="color:#e74c3c;">hondaotohoaiduc@gmail.com</a></p>
+
+                    <hr>
+                    <h4 style="margin-bottom: 1rem;">✪&nbsp;<span style="font-weight: bolder;">GIÁ XE TỐT NHẤT</span></h4>
+
+                    <p style="margin-bottom: 1rem;">Chúng tôi luôn cam kết mang lại mức giá tốt nhất thị trường cho quý khách, cùng với sự tư vấn tận tâm, chuyên nghiệp nhất.</p>
+
+                    <h4 style="margin-bottom: 1rem;">✪&nbsp;<span style="font-weight: bolder;">TƯ VẤN TẬN TÌNH</span></h4>
+
+                    <p>Với kinh nghiệm nhiều năm bán xe Honda, Chúng tôi tin sẽ giúp quý khách chọn được chiếc xe ưng ý và phù hợp nhất cho bản thân và gia đình.</p>
+
+                    <h4 style="margin-bottom: 1rem;">✪&nbsp;<span style="font-weight: bolder;">HỖ TRỢ TRẢ GÓP</span></h4>
+
+                    <p style="margin-bottom: 1rem;">Chúng tôi sẽ giúp Quý khách lựa chọn được cách trả góp với lãi suất cạnh tranh nhất. Phương thức thanh toán tiện lợi với hệ thống ngân hàng tốt nhất.</p>
+
+                    <h4 style="margin-bottom: 1rem;">✪&nbsp;<span style="font-weight: bolder;">HỖ TRỢ KHÁCH HÀNG ĐỔI XE CŨ, MUA XE MỚI</span></h4>
+
+                    <p style="margin-bottom: 1rem;">Thủ tục nhanh gọn, giao xe đúng hẹn <strong>5 năm</strong><span style="font-weight: bolder;"><strong>&nbsp;</strong>thu mua xe cũ giá tốt nhất cho khách hàng</span><strong>&nbsp;</strong>cùng những dịch vụ chăm sóc khách hàng tốt nhất.</p>
+                </div>
+                <a href="#" class="btn-primary">Gọi ngay: 0819.63.7777</a>
+            </div>
+        </div>
+
+        <div class="decor-flower"></div>
+    </div>
+</section>
+<section class="testimonial">
+    <h4 class="title-section">Các khách hàng nói gì?</h4>
+    <div class="container">
+
+        <div class="swiper testimonial-swiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="author-info">
+
+                            <div>
+                                <h4>Cody Fisher</h4>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+
+                        <p>
+                            Rất hài lòng với chất lượng và dịch vụ. Nhân viên tư vấn tận tâm, xe giao đúng hẹn và hình thức rất đẹp. Cảm ơn đội ngũ Honda vì trải nghiệm tuyệt vời!
+                        </p>
+
+                    </div>
+
+                    <div class="testimonial-image">
+                        <img src="~/images/SLD1.jpeg" alt="Mẹ và bé">
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="author-info">
+
+                            <div>
+                                <h4>Jane Cooper</h4>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+
+                        <p>
+                            Khoảnh khắc nhận xe thật sự rất đáng nhớ! Mọi thứ đều được chuẩn bị chu đáo, chuyên nghiệp. Cảm ơn cửa hàng đã mang đến niềm vui trọn vẹn cho gia đình tôi.
+                        </p>
+
+                    </div>
+                    <div class="testimonial-image">
+                        <img src="~/images/SLD2.jpeg" alt="Mẹ và bé">
+                    </div>
+
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="author-info">
+
+                            <div>
+                                <h4>Jane Cooper</h4>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+
+                        <p>
+                            Lần đầu nhận xe mà cảm giác như được tặng quà lớn 😍. Cảm ơn Honda vì sự tận tâm và chu đáo, xe chạy êm và rất đẹp!
+                        </p>
+
+
+                    </div>
+                    <div class="testimonial-image">
+                        <img src="~/images/SLD3.jpeg" alt="Mẹ và bé">
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- Navigation -->
+        <div class="swiper-button-next">
+            <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.23021 0.96891L9.73021 8.46891C9.80001 8.53861 9.85531 8.62131 9.89301 8.71241C9.93081 8.80341 9.95021 8.90101 9.95021 8.99961C9.95021 9.09811 9.93081 9.19571 9.89301 9.28681C9.85531 9.37781 9.80001 9.46051 9.73021 9.53021L2.23021 17.0302C2.08951 17.1709 1.89866 17.25 1.69963 17.25C1.50061 17.25 1.30974 17.1709 1.16901 17.0302C1.02828 16.8895 0.949219 16.6986 0.949219 16.4996C0.949219 16.3006 1.02828 16.1097 1.16901 15.969L8.13931 8.99961L1.16901 2.03021C1.09933 1.96051 1.04405 1.87781 1.00634 1.78671C0.968629 1.69571 0.949219 1.59811 0.949219 1.49961C0.949219 1.40101 0.968629 1.30341 1.00634 1.21241C1.04405 1.12141 1.09933 1.03861 1.16901 0.96891C1.23869 0.89931 1.32142 0.844011 1.41246 0.806311C1.50351 0.768611 1.60109 0.74921 1.69963 0.74921C1.79818 0.74921 1.89576 0.768611 1.98681 0.806311C2.07781 0.844011 2.16061 0.89931 2.23021 0.96891Z"
+                      fill="#8E6040" />
+            </svg>
+
+        </div>
+        <div class="swiper-button-prev">
+            <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.76979 17.0311L0.269792 9.53109C0.199992 9.46139 0.144692 9.37869 0.106992 9.28759C0.0691918 9.19659 0.0497904 9.09899 0.0497904 9.00039C0.0497904 8.90189 0.0691918 8.80429 0.106992 8.71319C0.144692 8.62219 0.199992 8.53949 0.269792 8.46979L7.76979 0.96979C7.91049 0.82906 8.10134 0.75 8.30037 0.75C8.49939 0.75 8.69026 0.82906 8.83099 0.96979C8.97172 1.11052 9.05078 1.3014 9.05078 1.50042C9.05078 1.69944 8.97172 1.89031 8.83099 2.03104L1.86069 9.00039L8.83099 15.9698C8.90067 16.0395 8.95595 16.1222 8.99366 16.2133C9.03137 16.3043 9.05078 16.4019 9.05078 16.5004C9.05078 16.599 9.03137 16.6966 8.99366 16.7876C8.95595 16.8786 8.90067 16.9614 8.83099 17.0311C8.76131 17.1007 8.67858 17.156 8.58754 17.1937C8.49649 17.2314 8.39891 17.2508 8.30037 17.2508C8.20182 17.2508 8.10424 17.2314 8.01319 17.1937C7.92219 17.156 7.83939 17.1007 7.76979 17.0311Z"
+                      fill="#8E6040" />
+            </svg>
+
+        </div>
+    </div>
+</section>
+
+
+@*<section class="section-daily">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h4 class="sub-title">Tại sao bạn nên hợp tác cùng chúng tôi?</h4>
+                <h4 class="title-section">Đồng hành kinh doanh – Khởi đầu vững vàng cùng OMORI</h4>
+            </div>
+            <div class="flex align-items-start">
+                <div class="accordion">
+                    <div class="accordion-group">
+                        <div class="accordion-toggle active">Sản phẩm dễ bán, nhu cầu cao</div>
+                        <div class="accordion-panel" style="display: block;">
+                            <p>   •        Lợi thế cạnh tranh: công nghệ Nhật, phù hợp thể trạng trẻ Việt.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-toggle">Chính sách chiết khấu và lợi nhuận hấp dẫn</div>
+                        <div class="accordion-panel" style="display: none;">
+                            <p>•        Chiết khấu cao, linh hoạt theo cấp đại lý (cấp 1, cấp 2…).</p>
+                            <p>•        Ưu đãi riêng cho đại lý mới: hỗ trợ nhập hàng lần đầu, tặng kèm sản phẩm mẫu.</p>
+                            <p>•        Cam kết lợi nhuận ổn định và lâu dài.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-toggle">Hỗ trợ marketing và truyền thông mạnh mẽ</div>
+                        <div class="accordion-panel">
+                            <p> •        Omori đầu tư bài bản vào thương hiệu: quảng cáo online, KOLs, các chương trình đồng hành cùng mẹ và bé.</p>
+                            <p> •        Cung cấp đầy đủ ấn phẩm, hình ảnh, nội dung truyền thông cho đại lý.</p>
+                            <p>•        Hỗ trợ tổ chức các hoạt động bán hàng và sự kiện tại địa phương.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-toggle">Đào tạo và đồng hành phát triển</div>
+                        <div class="accordion-panel">
+                            <p> •        Được huấn luyện bán hàng, chăm sóc khách hàng, kiến thức sản phẩm từ đội ngũ chuyên môn.</p>
+                            <p>•        Omori đồng hành dài hạn, hỗ trợ xử lý khó khăn trong quá trình bán hàng.</p>
+
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-toggle">Cùng Omori phát triển - Cùng lan tỏa yêu thương</div>
+                        <div class="accordion-panel">
+                            <p> •        Kêu gọi hành động: trở thành đại lý để không chỉ kinh doanh hiệu quả mà còn góp phần chăm sóc trẻ em Việt tốt hơn.</p>
+                            <p>•        Cam kết từ Omori: minh bạch – đồng hành – phát triển bền vững.</p>
+                        </div>
+                    </div>
+                    <small class="mt-3 d-block">
+                        *Điều kiện trở thành đại lý: Có mô hình kinh doanh ổn định, cam kết
+                        doanh số
+                        tối thiểu theo vùng
+                    </small>
+
+                </div>
+                <div class="box-product">
+                    <img src="images/img2.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-contact section-contact-page">
+        <div class="container">
+            <div class="block-contact">
+                <div class="flex">
+                    <form id="form-dk-tu-van">
+                        <div class="grid-box">
+
+                            <h4 class="title-section text-center">Đăng kí tư vấn ngay</h4>
+
+                            <h5 class="title-section text-center ss-dk-tv" style="color:red;display:none">Đăng kí tư vấn thành công</h5>
+
+                            <div class="grid-2">
+                                <div class="form-group form-group-2">
+                                    <label>Họ tên / Tên công ty<span style="color:red">*</span></label>
+                                    <input id="Name-tv" name="Name-tv" class="form-control" type="text">
+                                </div>
+                                <div class="form-group form-group-2">
+                                    <label>Số điện thoại<span style="color:red">*</span></label>
+                                    <input id="Phone-tv" name="Phone-tv" class="form-control" type="tel">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Lời nhắn</label>
+                                <textarea class="form-control" id="Note-tv" rows="3"></textarea>
+                            </div>
+                            <div class="action text-center">
+                                <a href="javascript:void(0)" class="btn btn-base dk-tu-van" style="min-width: 170px;">
+                                    Đăng
+                                    ký
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="box-product">
+                        <img src="images/img1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>*@
+
+
+
+<script src="/js/swiper-bundle.min.js"></script>
+<script>
+    const milkSwiper = new Swiper('.milk-swiper', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+        speed: 800,
+    });
+    const awardsSwiper = new Swiper(".awardsSwiper", {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+            nextEl: ".awards-slider .swiper-button-next",
+            prevEl: ".awards-slider .swiper-button-prev",
+        },
+        breakpoints: {
+            992: { slidesPerView: 6 },
+            768: { slidesPerView: 5 },
+            480: { slidesPerView: 3 },
+        },
+    });
+    const testimonialSwiper = new Swiper(".testimonial-swiper", {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+            el: ".testimonial-swiper .swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".testimonial .swiper-button-next",
+            prevEl: ".testimonial .swiper-button-prev",
+        },
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        speed: 700,
+    });
+
+</script>
+

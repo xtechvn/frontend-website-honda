@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Honda</title>
+    <link rel="icon" type="~/image/png" href="~/images/logo_icon.jpg" sizes="32x32">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="~/css/jquery-ui.css">
+    <link rel="stylesheet" href="~/icofont/icofont.min.css" />
+    <link rel="stylesheet" href="~/css/main.css">
+
+    <style type="text/css">
+        /* Định nghĩa placeholder */
+        .placeholder_custom {
+            background-color: #e0e0e0; /* Màu nền xám */
+            color: transparent; /* Ẩn text bên trong */
+            border-radius: 4px; /* Bo góc nếu cần */
+            width: 100%; /* Chiều rộng sẽ tự động theo kích thước của DOM */
+            height: auto; /* Chiều cao tự điều chỉnh */
+            position: relative;
+        }
+
+            /* Hiệu ứng loading (nếu cần) */
+            .placeholder_custom::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(90deg, rgba(224,224,224,0) 0%, rgba(224,224,224,0.4) 50%, rgba(224,224,224,0) 100%);
+                animation: loading 1.5s infinite;
+            }
+
+        @@keyframes loading {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+    </style>
+
+    @await RenderSectionAsync("SocialMetaTags", required: false)
+
+    @*  <environment include="Development">
+
+        </environment>
+
+        <environment exclude="Development">
+
+        </environment>*@
+</head>
+<body>
+
+    <!-- Header Start -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="/">
+                    <div class="logo">
+                        <img class="green" src="~/images/Logo.png" alt="" />
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <i class="icofont-navigation-menu"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Trang chủ</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/" role="button"
+                               aria-haspopup="true" aria-expanded="false">Sản phẩm</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/Home/DetailHondaBRV">Honda BR-V</a>
+                                <a class="dropdown-item" href="/Home/Detail">Honda CR-V</a>
+                                <a class="dropdown-item" href="/Home/DetailHondaHr">Honda HR-V</a>
+                                <a class="dropdown-item" href="/Home/DetailHondaAccord">Honda Accord</a>
+                                <a class="dropdown-item" href="/Home/DetailHondaCity">Honda City</a>
+                                <a class="dropdown-item" href="/Home/DetailHondaCivic">Honda Civic</a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Header End -->
+    <!-- HOME -->
+    @RenderBody()
+    <!-- END HOME -->
+    <!-- Footer Start-->
+    <footer class="footer">
+        <div class="container">
+            <div class="wrap-ft">
+                <div class="left-ft">
+                    <a href="#">
+                        <div class="logo">
+                            <img class="green" src="images/Logo.png" alt="">
+                        </div>
+                    </a>
+                    <p>Công ty TNHH Quốc tế Happy Kids</p>
+                    <ul class="grid-address">
+                        <li>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.5253 4.30599C13.5508 4.21081 13.5947 4.12158 13.6547 4.04339C13.7147 3.9652 13.7894 3.8996 13.8748 3.85032C13.9601 3.80104 14.0543 3.76906 14.152 3.7562C14.2496 3.74334 14.3489 3.74985 14.4441 3.77537C15.8344 4.13813 17.103 4.86497 18.119 5.88103C19.1351 6.89708 19.8619 8.16562 20.2247 9.55599C20.2502 9.65116 20.2567 9.75042 20.2439 9.84811C20.231 9.94579 20.199 10.04 20.1497 10.1253C20.1005 10.2106 20.0349 10.2854 19.9567 10.3454C19.8785 10.4053 19.7893 10.4493 19.6941 10.4747C19.6307 10.4914 19.5655 10.4999 19.5 10.5001C19.3347 10.5001 19.1741 10.4455 19.043 10.3448C18.912 10.244 18.8179 10.1029 18.7753 9.94318C18.4795 8.80817 17.8863 7.77259 17.0569 6.9432C16.2275 6.11381 15.1919 5.52061 14.0569 5.22474C13.9616 5.19938 13.8723 5.15549 13.794 5.09558C13.7157 5.03566 13.65 4.9609 13.6006 4.87557C13.5513 4.79024 13.5192 4.69601 13.5063 4.59828C13.4933 4.50054 13.4998 4.40122 13.5253 4.30599ZM13.3069 8.22474C14.5997 8.56974 15.4303 9.40037 15.7753 10.6932C15.8179 10.8529 15.912 10.994 16.043 11.0948C16.1741 11.1955 16.3347 11.25 16.5 11.2501C16.5655 11.2499 16.6307 11.2414 16.6941 11.2247C16.7893 11.1993 16.8785 11.1553 16.9567 11.0954C17.0349 11.0354 17.1005 10.9606 17.1497 10.8753C17.199 10.79 17.231 10.6958 17.2439 10.5981C17.2567 10.5004 17.2502 10.4012 17.2247 10.306C16.7447 8.50974 15.4903 7.25537 13.6941 6.77537C13.5019 6.72402 13.2971 6.75113 13.1249 6.85073C12.9527 6.95033 12.8271 7.11426 12.7758 7.30646C12.7244 7.49866 12.7516 7.70338 12.8512 7.87559C12.9508 8.04781 13.1147 8.1734 13.3069 8.22474ZM20.9888 17.1638C20.8216 18.4341 20.1977 19.6002 19.2337 20.4442C18.2696 21.2882 17.0313 21.7523 15.75 21.7501C8.30626 21.7501 2.25001 15.6938 2.25001 8.25005C2.24771 6.96876 2.7119 5.73045 3.55588 4.76639C4.39986 3.80234 5.56592 3.17847 6.83626 3.0113C7.1575 2.97208 7.4828 3.0378 7.76362 3.19865C8.04444 3.35951 8.2657 3.60687 8.39438 3.9038L10.3744 8.32412V8.33537C10.4729 8.56267 10.5136 8.81083 10.4928 9.05769C10.472 9.30455 10.3904 9.54242 10.2553 9.75005C10.2384 9.77537 10.2206 9.7988 10.2019 9.82224L8.25001 12.136C8.9522 13.5629 10.4447 15.0422 11.8903 15.7463L14.1722 13.8047C14.1946 13.7859 14.2181 13.7684 14.2425 13.7522C14.45 13.6139 14.6887 13.5294 14.937 13.5065C15.1853 13.4836 15.4354 13.5229 15.6647 13.621L15.6769 13.6266L20.0934 15.6057C20.3909 15.7339 20.6389 15.955 20.8003 16.2358C20.9616 16.5167 21.0278 16.8422 20.9888 17.1638ZM19.5 16.9763C19.5 16.9763 19.4934 16.9763 19.4897 16.9763L15.0834 15.0029L12.8006 16.9444C12.7785 16.9632 12.7553 16.9807 12.7313 16.9969C12.5154 17.1409 12.2659 17.2265 12.0071 17.2452C11.7483 17.2639 11.489 17.2152 11.2547 17.1038C9.49876 16.2554 7.74845 14.5182 6.89907 12.781C6.7866 12.5484 6.73613 12.2906 6.75255 12.0327C6.76898 11.7749 6.85174 11.5256 6.99282 11.3091C7.00872 11.2837 7.02659 11.2596 7.04626 11.2369L9.00001 8.92037L7.03126 4.51412C7.03089 4.51038 7.03089 4.50661 7.03126 4.50287C6.12212 4.62146 5.28739 5.0674 4.68339 5.75716C4.0794 6.44693 3.74755 7.33322 3.75001 8.25005C3.75348 11.4316 5.01888 14.4818 7.26856 16.7315C9.51825 18.9812 12.5685 20.2466 15.75 20.2501C16.6663 20.2532 17.5523 19.9225 18.2425 19.3198C18.9327 18.7171 19.3797 17.8837 19.5 16.9754V16.9763Z" fill="#033256"></path>
+                            </svg>
+                            036 5809 316
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 4.5H3C2.80109 4.5 2.61032 4.57902 2.46967 4.71967C2.32902 4.86032 2.25 5.05109 2.25 5.25V18C2.25 18.3978 2.40804 18.7794 2.68934 19.0607C2.97064 19.342 3.35218 19.5 3.75 19.5H20.25C20.6478 19.5 21.0294 19.342 21.3107 19.0607C21.592 18.7794 21.75 18.3978 21.75 18V5.25C21.75 5.05109 21.671 4.86032 21.5303 4.71967C21.3897 4.57902 21.1989 4.5 21 4.5ZM12 12.4828L4.92844 6H19.0716L12 12.4828ZM9.25406 12L3.75 17.0447V6.95531L9.25406 12ZM10.3641 13.0172L11.4891 14.0531C11.6274 14.1801 11.8084 14.2506 11.9963 14.2506C12.1841 14.2506 12.3651 14.1801 12.5034 14.0531L13.6284 13.0172L19.0659 18H4.92844L10.3641 13.0172ZM14.7459 12L20.25 6.95438V17.0456L14.7459 12Z" fill="#033256"></path>
+                            </svg>honda
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M18.75 21H14.1131C14.892 20.3045 15.6266 19.5608 16.3125 18.7734C18.8859 15.8138 20.25 12.6938 20.25 9.75C20.25 7.56196 19.3808 5.46354 17.8336 3.91637C16.2865 2.36919 14.188 1.5 12 1.5C9.81196 1.5 7.71354 2.36919 6.16637 3.91637C4.61919 5.46354 3.75 7.56196 3.75 9.75C3.75 12.6938 5.11031 15.8138 7.6875 18.7734C8.37338 19.5608 9.10795 20.3045 9.88688 21H5.25C5.05109 21 4.86032 21.079 4.71967 21.2197C4.57902 21.3603 4.5 21.5511 4.5 21.75C4.5 21.9489 4.57902 22.1397 4.71967 22.2803C4.86032 22.421 5.05109 22.5 5.25 22.5H18.75C18.9489 22.5 19.1397 22.421 19.2803 22.2803C19.421 22.1397 19.5 21.9489 19.5 21.75C19.5 21.5511 19.421 21.3603 19.2803 21.2197C19.1397 21.079 18.9489 21 18.75 21ZM5.25 9.75C5.25 7.95979 5.96116 6.2429 7.22703 4.97703C8.4929 3.71116 10.2098 3 12 3C13.7902 3 15.5071 3.71116 16.773 4.97703C18.0388 6.2429 18.75 7.95979 18.75 9.75C18.75 15.1153 13.5497 19.5938 12 20.8125C10.4503 19.5938 5.25 15.1153 5.25 9.75ZM15.75 9.75C15.75 9.00832 15.5301 8.2833 15.118 7.66661C14.706 7.04993 14.1203 6.56928 13.4351 6.28545C12.7498 6.00162 11.9958 5.92736 11.2684 6.07205C10.541 6.21675 9.8728 6.5739 9.34835 7.09835C8.8239 7.6228 8.46675 8.29098 8.32205 9.01841C8.17736 9.74584 8.25162 10.4998 8.53545 11.1851C8.81928 11.8703 9.29993 12.456 9.91661 12.868C10.5333 13.2801 11.2583 13.5 12 13.5C12.9946 13.5 13.9484 13.1049 14.6517 12.4017C15.3549 11.6984 15.75 10.7446 15.75 9.75ZM9.75 9.75C9.75 9.30499 9.88196 8.86998 10.1292 8.49997C10.3764 8.12996 10.7278 7.84157 11.139 7.67127C11.5501 7.50097 12.0025 7.45642 12.439 7.54323C12.8754 7.63005 13.2763 7.84434 13.591 8.15901C13.9057 8.47368 14.12 8.87459 14.2068 9.31105C14.2936 9.7475 14.249 10.1999 14.0787 10.611C13.9084 11.0222 13.62 11.3736 13.25 11.6208C12.88 11.868 12.445 12 12 12C11.4033 12 10.831 11.7629 10.409 11.341C9.98705 10.919 9.75 10.3467 9.75 9.75Z" fill="#033256"></path>
+                            </svg>
+                            Tầng 2, số 134 ngõ 136 Tây Sơn, Q. Đống Đa, Hà Nội
+                        </li>
+                    </ul>
+                </div>
+                <div class="right-ft">
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FMetaVietnam&amp;tabs&amp;width=300&amp;height=130&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId" width="100%" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                    </iframe>
+                </div>
+            </div>
+            <div class="wrap-ft">
+                <div class="left-ft">
+                    <div class="flex-link">
+                        <div class="item">
+                            <h4 class="title">Dòng xe Honda</h4>
+                            <ul>
+                                <li>
+                                    <a class="dropdown-item" href="/Home/DetailHondaBRV">Honda BR-V</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/Home/Detail">Honda CR-V</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/Home/DetailHondaHr">Honda HR-V</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/Home/DetailHondaAccord">Honda Accord</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/Home/DetailHondaCity">Honda City</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/Home/DetailHondaCivic">Honda Civic</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item cols-2">
+                            <h4 class="title">Hỗ trợ khách hàng</h4>
+                            <ul>
+                                <li><a href="">Chương trình khuyến mãi</a></li>
+                                <li><a href="">Bảng giá xe Honda</a></li>
+                                <li><a href="">Mua xe Honda trả góp</a></li>
+                                <li><a href="">Đăng ký lái thử</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer End-->
+    <div id="popup" class="popup-overlay popup" style="display: none;">
+        <div class="popup-wrapper">
+            <div class="popup-content" style="max-width:600px!important">
+
+                <div class="section-contact">
+                    <div class="block-contact">
+                        <h3 class="title-section text-center">Báo giá lăn bánh & Lái thử xe</h3>
+                        <h5 class="title-section text-center ss-dk-dl" style="color:red;display:none">Đăng kí đại lý thành công</h5>
+                        <div class="">
+                            <form style="width:100%!important" onsubmit="return false">
+                                <div>
+                                    <div>
+                                        <label><input type="radio" checked class="radio-401" name="radio-401" value="Trả thẳng"><span class="wpcf7-list-item-label">Trả thẳng</span></label>
+                                        <label><input type="radio" class="radio-401" name="radio-401" value="Trả góp"><span class="wpcf7-list-item-label">Trả góp</span></label>
+                                    </div>
+                                    <div class="">
+                                        <div class="form-group form-group-2">
+                                            <label>Họ tên</label>
+                                            <input class="form-control" type="text" id="name" placeholder="Họ và tên" required>
+                                        </div>
+                                        <div class="form-group form-group-2">
+                                            <label>Số điện thoại</label>
+                                            <input class="form-control" type="text" id="phone" placeholder="Số điện thoại" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Xe muốn mua</label>
+                                        <select class="form-control" id="type">
+                                            <option value="Honda CR-V">Honda CR-V</option>
+                                            <option value="Honda HR-V">Honda HR-V</option>
+                                            <option value="Honda BR-V">Honda BR-V</option>
+                                            <option value="Honda City">Honda City</option>
+                                            <option value="Honda Civic">Honda Civic</option>
+                                            <option value="Honda Accord">Honda Accord</option>
+                                        </select>
+                                    </div>
+                                    <div class="action text-center">
+                                        <button onclick="" class="btn btn-base bt-dk"
+                                                style="min-width: 170px;">
+                                            Đăng
+                                            ký
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="backToTopBtn"></button>
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/swiper-bundle.min.js"></script>
+    <script src="~/js/jquery-ui.js"></script>
+    <script src="~/js/common.js"></script>
+    <script src="~/modules/home.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
