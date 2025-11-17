@@ -1,4 +1,7 @@
 ﻿$(document).ready(function () {
+    setTimeout(function () {
+        $('#popup').show();
+    }, 1000);
     $(document).on('click', '.bt-dk', function (e) {
         var name = $('#name').val();
         var phone = $('#phone').val();
