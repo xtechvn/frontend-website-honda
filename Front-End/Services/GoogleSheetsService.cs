@@ -9,7 +9,7 @@ namespace Front_End.Services
     public partial class GoogleSheetsService
     {
         private static readonly string SPREADSHEET_ID = "176hLO6BEhHVO1ToYMEScRA3lQpLRy5uyLQOUJ-JODvE";
-        private static readonly string SERVICE_ACCOUNT_KEY_FILE_PATH = "disco-horizon-462708-i0-3dffb532247d.json";
+        private static readonly string SERVICE_ACCOUNT_KEY_FILE_PATH = "disco-horizon-462708-i0-3666bdeab001.json";
         private readonly IConfiguration configuration;
         public GoogleSheetsService(IConfiguration _configuration)
         {

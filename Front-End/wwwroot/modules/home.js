@@ -59,8 +59,8 @@ var _home = {
     showphone: function () {
 
         var phone = $('#phone').val();
-        const phoneRegex = /^(0[3|5|7|8|9])[0-9]{8}$/;
-        if (!phoneRegex.test(phone.value.trim())) {
+        const phoneRegex = /^(0[3|5|7|8|9])[0-9]$/;
+        if (!phoneRegex.test(phone.trim())) {
             $('.phone-error').html("Số điện thoại không đúng định dạng.");         
         }
         if (phone == '' || phone == undefined) {
