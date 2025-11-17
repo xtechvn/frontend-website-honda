@@ -3323,7 +3323,6 @@
     }
 
     .title-contact {
-
         font-size: 32px;
         font-weight: 700;
         line-height: 150%;
@@ -3352,7 +3351,6 @@
 
         li {
             margin-bottom: 10px;
-
             font-size: 16px;
             display: flex;
             gap: 10px;
@@ -3360,10 +3358,8 @@
 
         .tt {
             min-width: 100px;
-
             font-weight: 700;
         }
-
     }
 
     .grid-address {
@@ -3377,7 +3373,6 @@
             color: #8E6040;
             font-size: 16px;
             line-height: 150%;
-
             /* 24px */
             ul {
                 li {
@@ -3386,7 +3381,8 @@
                     gap: 10px;
                     margin-bottom: 16px;
 
-                    &:not(:last-child) {}
+                    &:not(:last-child) {
+                    }
                 }
             }
         }
@@ -3436,7 +3432,6 @@
 
         li {
             margin-bottom: 10px;
-
             font-size: 16px;
             display: flex;
             gap: 10px;
@@ -3444,20 +3439,25 @@
 
         .tt {
             min-width: 100px;
-
             font-weight: 700;
         }
-
     }
 
     .block-contact {
-        background: url(images/bg-contact.png) no-repeat top right,
-            linear-gradient(254deg, #FFF 0%, #E5C7A6 100%);
+        background: url(images/bg-contact.png) no-repeat top right, linear-gradient(254deg, #FFF 0%, #E5C7A6 100%);
         border-radius: 16px;
         padding: 40px 80px;
         gap: 20px;
 
         @media (max-width: 1023px) {
+            padding: 20px;
+        }
+
+        @media (max-width: 350px) {
+            padding: 20px;
+        }
+
+        @media (max-width: 767px) {
             padding: 20px;
         }
 
@@ -3566,7 +3566,6 @@
             margin: 10px 0;
             text-align: left;
         }
-
     }
 }
 
