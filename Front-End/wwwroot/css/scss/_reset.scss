@@ -993,6 +993,13 @@ button,
         right: -0.0rem;
     }
 }
+@media(max-width: 767px) {
+    .popup-close {
+        position: absolute;
+        top: 1.5rem;
+        right: -0.0rem;
+    }
+}
 
 .accordion-group {
     border-bottom: 1px solid #EBD8CA;

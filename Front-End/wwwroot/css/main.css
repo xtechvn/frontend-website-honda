@@ -1117,6 +1117,13 @@ button, .btn {
         right: -0.0rem;
     }
 }
+@media(max-width: 767px) {
+    .popup-close {
+        position: absolute;
+        top: 1.5rem;
+        right: -0.0rem;
+    }
+}
 .accordion-group {
     border-bottom: 1px solid #ebd8ca;
     padding: .75rem 0
