@@ -28,6 +28,10 @@
         .header .navbar .logo img{
             width:70px!important;
         }
+        .error{
+            color:red;
+            
+        }
         /* Hiệu ứng loading (nếu cần) */
         .placeholder_custom::before {
             content: "";
@@ -191,35 +195,70 @@
     <div id="popup" class="popup-overlay popup" style="display: none;">
         <div class="popup-wrapper">
             <div class="popup-content" style="max-width:600px!important">
-
+                <span class="popup-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                        <path d="M19.281 18.7193C19.3507 18.789 19.406 18.8717 19.4437 18.9628C19.4814 19.0538 19.5008 19.1514 19.5008 19.2499C19.5008 19.3485 19.4814 19.4461 19.4437 19.5371C19.406 19.6281 19.3507 19.7109 19.281 19.7806C19.2114 19.8502 19.1286 19.9055 19.0376 19.9432C18.9465 19.9809 18.849 20.0003 18.7504 20.0003C18.6519 20.0003 18.5543 19.9809 18.4632 19.9432C18.3722 19.9055 18.2895 19.8502 18.2198 19.7806L12.0004 13.5602L5.78104 19.7806C5.64031 19.9213 5.44944 20.0003 5.25042 20.0003C5.05139 20.0003 4.86052 19.9213 4.71979 19.7806C4.57906 19.6398 4.5 19.449 4.5 19.2499C4.5 19.0509 4.57906 18.86 4.71979 18.7193L10.9401 12.4999L4.71979 6.28055C4.57906 6.13982 4.5 5.94895 4.5 5.74993C4.5 5.55091 4.57906 5.36003 4.71979 5.2193C4.86052 5.07857 5.05139 4.99951 5.25042 4.99951C5.44944 4.99951 5.64031 5.07857 5.78104 5.2193L12.0004 11.4396L18.2198 5.2193C18.3605 5.07857 18.5514 4.99951 18.7504 4.99951C18.9494 4.99951 19.1403 5.07857 19.281 5.2193C19.4218 5.36003 19.5008 5.55091 19.5008 5.74993C19.5008 5.94895 19.4218 6.13982 19.281 6.28055L13.0607 12.4999L19.281 18.7193Z" fill="#2A3262"></path>
+                    </svg>
+                </span>
                 <div class="section-contact">
                     <div class="block-contact">
-                        <h3 class="title-section text-center">Báo Đăng ký & Lái thử xe</h3>
+                        <img src="/images/banner-home.jpeg" />
+                        <h3 class="title-section text-center" style="color: #0099f2 !important; font-size: 22px !important; margin-bottom: 10px !important">LIÊN HỆ HOTLINE 0901.216.386</h3>
+                        <h3 class="title-section text-center" style="color: #0099f2 !important; font-size: 22px !important; margin-bottom:10px!important">Báo Đăng ký & Lái thử xe</h3>
                         <h5 class="title-section text-center ss-dk-dl" style="color:red;display:none">Đăng kí đại lý thành công</h5>
+                        <ul style="font-size: 15px !important; color: #212529!important">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 640 640" fill="none">
+                                    <path fill="#74C0FC" d="M385.5 132.8C393.1 119.9 406.9 112 421.8 112L424 112C446.1 112 464 129.9 464 152C464 174.1 446.1 192 424 192L350.7 192L385.5 132.8zM254.5 132.8L289.3 192L216 192C193.9 192 176 174.1 176 152C176 129.9 193.9 112 216 112L218.2 112C233.1 112 247 119.9 254.5 132.8zM344.1 108.5L320 149.5L295.9 108.5C279.7 80.9 250.1 64 218.2 64L216 64C167.4 64 128 103.4 128 152C128 166.4 131.5 180 137.6 192L96 192C78.3 192 64 206.3 64 224L64 256C64 273.7 78.3 288 96 288L544 288C561.7 288 576 273.7 576 256L576 224C576 206.3 561.7 192 544 192L502.4 192C508.5 180 512 166.4 512 152C512 103.4 472.6 64 424 64L421.8 64C389.9 64 360.3 80.9 344.1 108.4zM544 336L344 336L344 544L480 544C515.3 544 544 515.3 544 480L544 336zM296 336L96 336L96 480C96 515.3 124.7 544 160 544L296 544L296 336z" />
+                                </svg>
+                                GIẢM TIỀN MẶT TRỰC TIẾP
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 640 640" fill="none">
+                                    <path fill="#74C0FC" d="M385.5 132.8C393.1 119.9 406.9 112 421.8 112L424 112C446.1 112 464 129.9 464 152C464 174.1 446.1 192 424 192L350.7 192L385.5 132.8zM254.5 132.8L289.3 192L216 192C193.9 192 176 174.1 176 152C176 129.9 193.9 112 216 112L218.2 112C233.1 112 247 119.9 254.5 132.8zM344.1 108.5L320 149.5L295.9 108.5C279.7 80.9 250.1 64 218.2 64L216 64C167.4 64 128 103.4 128 152C128 166.4 131.5 180 137.6 192L96 192C78.3 192 64 206.3 64 224L64 256C64 273.7 78.3 288 96 288L544 288C561.7 288 576 273.7 576 256L576 224C576 206.3 561.7 192 544 192L502.4 192C508.5 180 512 166.4 512 152C512 103.4 472.6 64 424 64L421.8 64C389.9 64 360.3 80.9 344.1 108.4zM544 336L344 336L344 544L480 544C515.3 544 544 515.3 544 480L544 336zM296 336L96 336L96 480C96 515.3 124.7 544 160 544L296 544L296 336z" />
+                                </svg>
+                                QUÀ TẶNG BẢO HIỂM THÂN VỎ
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 640 640" fill="none">
+                                    <path fill="#74C0FC" d="M385.5 132.8C393.1 119.9 406.9 112 421.8 112L424 112C446.1 112 464 129.9 464 152C464 174.1 446.1 192 424 192L350.7 192L385.5 132.8zM254.5 132.8L289.3 192L216 192C193.9 192 176 174.1 176 152C176 129.9 193.9 112 216 112L218.2 112C233.1 112 247 119.9 254.5 132.8zM344.1 108.5L320 149.5L295.9 108.5C279.7 80.9 250.1 64 218.2 64L216 64C167.4 64 128 103.4 128 152C128 166.4 131.5 180 137.6 192L96 192C78.3 192 64 206.3 64 224L64 256C64 273.7 78.3 288 96 288L544 288C561.7 288 576 273.7 576 256L576 224C576 206.3 561.7 192 544 192L502.4 192C508.5 180 512 166.4 512 152C512 103.4 472.6 64 424 64L421.8 64C389.9 64 360.3 80.9 344.1 108.4zM544 336L344 336L344 544L480 544C515.3 544 544 515.3 544 480L544 336zM296 336L96 336L96 480C96 515.3 124.7 544 160 544L296 544L296 336z" />
+                                </svg>
+                                QUÀ TẶNG PHỤ KIỆN &amp; BẢO HÀNH XE
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 640 640" fill="none">
+                                    <path fill="#74C0FC" d="M385.5 132.8C393.1 119.9 406.9 112 421.8 112L424 112C446.1 112 464 129.9 464 152C464 174.1 446.1 192 424 192L350.7 192L385.5 132.8zM254.5 132.8L289.3 192L216 192C193.9 192 176 174.1 176 152C176 129.9 193.9 112 216 112L218.2 112C233.1 112 247 119.9 254.5 132.8zM344.1 108.5L320 149.5L295.9 108.5C279.7 80.9 250.1 64 218.2 64L216 64C167.4 64 128 103.4 128 152C128 166.4 131.5 180 137.6 192L96 192C78.3 192 64 206.3 64 224L64 256C64 273.7 78.3 288 96 288L544 288C561.7 288 576 273.7 576 256L576 224C576 206.3 561.7 192 544 192L502.4 192C508.5 180 512 166.4 512 152C512 103.4 472.6 64 424 64L421.8 64C389.9 64 360.3 80.9 344.1 108.4zM544 336L344 336L344 544L480 544C515.3 544 544 515.3 544 480L544 336zM296 336L96 336L96 480C96 515.3 124.7 544 160 544L296 544L296 336z" />
+                                </svg>
+                                ƯU ĐÃI ĐẶC BIỆT CHO KHÁCH LIÊN HỆ HOTLINE
+                            </li>
+                        </ul>
                         <div class="">
-                            <form style="width:100%!important" onsubmit="return false">
+                            <form style="width:100%!important" id="from-add" onsubmit="return false">
                                 <div>
                                     <div>
                                         <span>
-                                            <label style="padding:10px!important"><input type="radio" checked class="radio-401" style="height:12px!important" name="radio-401" value="Trả thẳng"><span class="wpcf7-list-item-label">Trả thẳng</span></label>
-                                        </span> 
+                                            <label style="padding:10px!important"><input type="radio" checked class="radio-401" style="height:12px!important" name="radio-401" value="Trả thẳng"><span class="wpcf7-list-item-label" style="color: #212529!important; ">Trả thẳng</span></label>
+                                        </span>
                                         <span>
-                                            <label style="padding:10px!important"><input type="radio" class="radio-401"style="height:12px!important" name="radio-401" value="Trả góp"><span class="wpcf7-list-item-label">Trả góp</span></label>
+                                            <label style="padding:10px!important"><input type="radio" class="radio-401" style="height:12px!important" name="radio-401" value="Trả góp"><span class="wpcf7-list-item-label" style="color: #212529!important;">Trả góp</span></label>
                                         </span>
                                     </div>
                                     <div class="">
                                         <div class="form-group form-group-2">
                                             <label>Họ tên</label>
-                                            <input class="form-control" type="text" id="name" placeholder="Họ và tên" required>
+                                            <input class="form-control" type="text" id="name" onchange="_home.showname()" placeholder="Họ và tên" required>
+                                            <label class="name-error error" style="display: none;">Họ tên không được bỏ trống</label>
                                         </div>
                                         <div class="form-group form-group-2">
                                             <label>Số điện thoại</label>
-                                            <input class="form-control" type="text" id="phone" placeholder="Số điện thoại" required>
+                                            <input class="form-control" type="text" id="phone" onchange="_home.showphone()" placeholder="Số điện thoại" required>
+                                            <label class="phone-error error" style="display: none;">Số điện thoại không được bỏ trống</label>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label>Xe muốn mua</label>
-                                        <select class="form-control" id="type">
+                                        <select class="form-control" id="type" style="color:black !important">
+                                            <option value="Xe cần tư vấn">Xe cần tư vấn</option>
                                             <option value="Honda CR-V">Honda CR-V</option>
                                             <option value="Honda HR-V">Honda HR-V</option>
                                             <option value="Honda BR-V">Honda BR-V</option>
@@ -230,9 +269,9 @@
                                     </div>
                                     <div class="action text-center">
                                         <button onclick="" class="btn btn-base bt-dk"
-                                                style="min-width: 170px;">
+                                                style="min-width: 170px; background: rgb(0, 153, 242)!important">
                                             Đăng
-                                            ký
+                                            ký ngay
                                         </button>
                                     </div>
                                 </div>
