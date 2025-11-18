@@ -1084,7 +1084,8 @@ button, .btn {
         height: 100vh;
         min-height: 100vh;
         border-radius: 0;
-        max-width:350px !important;
+        max-width: 350px !important;
+        margin-top: 20px;
     }
 }
 @media(max-width: 350px) {
@@ -1093,6 +1094,7 @@ button, .btn {
         min-height: 70vh;
         border-radius: 0;
         max-width: 300px !important;
+        margin-top: 10px;
     }
 }
 .overflow-hidden {
@@ -1113,15 +1115,15 @@ button, .btn {
 @media(max-width: 350px) {
     .popup-close {
         position: absolute;
-        top: 1.5rem;
-        right: -0.0rem;
+        top: 0.5rem;
+        right: 0.5rem;
     }
 }
 @media(max-width: 767px) {
     .popup-close {
         position: absolute;
-        top: 1.5rem;
-        right: -0.0rem;
+        top: 0.5rem;
+        right: 0.5rem;
     }
 }
 .accordion-group {
