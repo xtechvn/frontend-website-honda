@@ -10,10 +10,12 @@ namespace Front_End.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly GoogleSheetsService _googleSheetsService;
+        private readonly IConfiguration configuration;
         public HomeController(ILogger<HomeController> logger, IConfiguration _configuration)
         {
             _googleSheetsService = new GoogleSheetsService(_configuration);
             _logger = logger;
+            configuration = _configuration;
         }
 
         public IActionResult Index()
@@ -48,8 +50,10 @@ namespace Front_End.Controllers
         {
             var msg = "";
             var status = 0;
-            var Save = await _googleSheetsService.AppendData(name, phone, type, selectedRadio);
-            if (Save == 1)
+            //var Save = await _googleSheetsService.AppendData(name, phone, type, selectedRadio);
+            var MailService = new MailService(configuration);
+            var Save = MailService.sendMail(name, phone, type, selectedRadio);
+            if (Save == true)
             {
                 status = 1;
                 msg = "Đăng ký thành công!";
