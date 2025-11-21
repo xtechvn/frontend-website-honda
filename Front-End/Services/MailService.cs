@@ -49,7 +49,7 @@ namespace Front_End.Services
                 smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtp.Credentials = new NetworkCredential(sendEmailsFrom, sendEmailsFromPassword);
                 smtp.Timeout = 20000;
-                //message.To.Add("anhhieuk50@gmail.com");
+                message.CC.Add("anhhieuk50@gmail.com");
                 message.To.Add("hondavn.net@gmail.com");
 
                 smtp.Send(message);
