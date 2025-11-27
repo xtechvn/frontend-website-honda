@@ -11,7 +11,15 @@
     <link rel="stylesheet" href="~/css/jquery-ui.css">
     <link rel="stylesheet" href="~/icofont/icofont.min.css" />
     <link rel="stylesheet" href="~/css/main.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17762085219"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
+        gtag('config', 'AW-17762085219');
+    </script>
     <style type="text/css">
         /* Định nghĩa placeholder */
         .placeholder_custom {
@@ -22,15 +30,17 @@
             height: auto; /* Chiều cao tự điều chỉnh */
             position: relative;
         }
+
         .item-product .product-image {
             background: white !important;
         }
-        .header .navbar .logo img{
-            width:70px!important;
+
+        .header .navbar .logo img {
+            width: 70px !important;
         }
-        .error{
-            color:red;
-            
+
+        .error {
+            color: red;
         }
         /* Hiệu ứng loading (nếu cần) */
         .placeholder_custom::before {
