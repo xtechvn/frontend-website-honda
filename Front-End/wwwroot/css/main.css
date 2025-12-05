@@ -1122,7 +1122,7 @@ button, .btn {
 @media(max-width: 767px) {
     .popup-close {
         position: absolute;
-        top: 0.5rem;
+        top: 1.5rem;
         right: 0.5rem;
     }
 }
