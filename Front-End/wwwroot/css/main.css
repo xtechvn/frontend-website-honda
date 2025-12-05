@@ -6620,59 +6620,43 @@ button, .btn {
 ================================ */
 @media (max-width: 430px) {
 
-    /* Giảm padding cho container */
-    .container {
-        padding-left: 12px !important;
-        padding-right: 12px !important;
+    /* Fix popup bị che ở iPhone */
+    .popup,
+    .popup-content,
+    .modal,
+    .modal-dialog {
+        max-height: 90vh !important; /* Không vượt quá màn hình */
+        overflow-y: auto !important; /* Cho scroll */
+        -webkit-overflow-scrolling: touch !important; /* Mượt trên iPhone */
     }
 
-    /* Label + Input nằm cùng 1 dòng (theo yêu cầu trước của bạn) */
-    .form-group-2 {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: space-between !important;
-        gap: 10px !important;
-        width: 100%;
+    /* Nếu popup có lớp cụ thể, thêm vào đây */
+    .form-popup,
+    .popup-wrapper,
+    .popup-container {
+        max-height: 90vh !important;
+        overflow-y: auto !important;
     }
 
-        .form-group-2 label {
-            font-size: 14px !important;
-            margin: 0 !important;
-            white-space: nowrap;
-        }
-
-        .form-group-2 input.form-control {
-            flex: 1 !important;
-            height: 36px !important;
-            font-size: 15px !important;
-        }
-
-    /* Nút đăng ký */
-    .bt-dk {
-        width: 100% !important;
-        font-size: 16px !important;
-        padding: 12px 0 !important;
+    /* Giảm padding để vừa màn */
+    .popup-content {
+        padding: 12px !important;
     }
 
-    /* Radio buttons */
-    .radio-401 {
-        width: 14px !important;
-        height: 14px !important;
-    }
-
-    /* Select xe */
-    select.form-control {
+    /* Co nhỏ size input, select */
+    .form-control {
         height: 40px !important;
         font-size: 15px !important;
     }
 
-    /* Giảm margin/padding các nhóm input */
-    .form-group {
-        margin-bottom: 10px !important;
+    .bt-dk {
+        width: 100% !important;
+        padding: 12px !important;
+        font-size: 16px !important;
     }
 
-    /* Chỉnh chữ cho dễ đọc trên màn nhỏ */
-    label, span, p {
-        font-size: 14px !important;
+    /* Co margin các form-group để không dài quá màn */
+    .form-group {
+        margin-bottom: 12px !important;
     }
 }
